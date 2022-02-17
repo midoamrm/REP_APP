@@ -1,0 +1,30 @@
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title><h2 >Recpies Menu  </h2></ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/search"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+    <ion-card *ngFor="let item of data">
+      <ion-card-header>
+        <ion-card-subtitle><p class="p1">{{item.publisher}}</p></ion-card-subtitle>
+        <ion-card-title><p class="p2">{{item.title}}</p></ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+      <ion-img [src]="item.imageurl" (click)='godet(item.repid)'></ion-img>
+
+
+    </ion-card-content>
+
+    </ion-card>
+    </ion-list>
+
+
+  </ion-content>
+

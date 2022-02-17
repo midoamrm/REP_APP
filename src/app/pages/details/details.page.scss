@@ -1,0 +1,36 @@
+h2{
+
+  font-weight: 900;
+  font-style: italic;
+  color: white;
+}
+ion-toolbar{
+--background: chocolate;}
+
+
+ion-content{ --ion-background-color:black;
+}
+ion-img::part(image) {
+  border-radius: 10px;
+}
+.p2{
+font-weight: 900;
+font-style: italic;
+color: white;
+}
+.p1{
+font-weight: 500;
+font-style: italic;
+color: white;
+}
+.p3{
+font-weight: 700;
+font-style: italic;
+color: white;
+}
+.p4{
+font-weight: 700;
+font-style: italic;
+color: white;
+text-decoration: none;
+}

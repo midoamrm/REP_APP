@@ -1,0 +1,25 @@
+ion-toolbar{
+  --background: black;
+  --color: floralwhite;
+
+  height: 70px;
+  border-radius: 5px 5px 80px 5px;
+
+
+  }
+  ion-content{
+    --ion-background-color:black;
+  }
+p{
+  font-weight: 1000;
+  font-style: italic;
+  color:white;
+}
+img {
+
+  float: top;
+  width:  100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 200px;
+}

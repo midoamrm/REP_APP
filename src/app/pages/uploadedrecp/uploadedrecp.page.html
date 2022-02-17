@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>your Recpies</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/search"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="showPrompt()" > Add One More</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngFor="let file of img ">
+  <ion-item>
+   <p>{{file.name}}</p> <ion-icon slot="end" color="primary" name="trash-outline" (click)="deletimg(file)"></ion-icon>
+  </ion-item>
+  <ion-item>
+    <img [src]="file.data">
+  </ion-item>
+</ion-list>
+</ion-content>

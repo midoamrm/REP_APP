@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/repiesvideos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{namem}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngIf="namem==='pizza'">
+    <iframe width="370" height="399" src="https://www.youtube.com/embed/1-SJGQ2HLp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+  <ion-item *ngIf="namem==='blackberry'">
+    <iframe width="370" height="399" src="https://www.youtube.com/embed/oN89UTfPhYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+  <ion-item *ngIf="namem==='blackcurrant'">
+    <iframe width="370" height="399" src="https://www.youtube.com/embed/FlxF8a4H1LA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+  <ion-item *ngIf="namem==='carrot'">
+    <iframe width="370" height="399" src="https://www.youtube.com/embed/Ul7YPps6PW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+  <ion-item *ngIf="namem==='broccoli'">
+    <iframe width="370" height="399" src="https://www.youtube.com/embed/AmD8xllaDaw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+   <ion-item *ngIf="namem==='asparagus'">
+    <iframe width="370" height="409" src="https://www.youtube.com/embed/mGTZ__5c6Rw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+  <ion-item *ngIf="namem==='cauliflower'">
+    <iframe width="370" height="409" src="https://www.youtube.com/embed/BychJBkhKp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+  <ion-item *ngIf="namem==='ribs'">
+    <iframe width="370" height="409" src="https://www.youtube.com/embed/KgOBAWbkq5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+  <ion-item *ngIf="namem==='cucumber'">
+    <iframe width="370" height="409" src="https://www.youtube.com/embed/zau-F0L_hrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+  <ion-item *ngIf="namem==='green pepper'">
+    <iframe width="370" height="409" src="https://www.youtube.com/embed/mWYwrUTramk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+  <ion-item *ngIf="namem==='lettuce'">
+    <iframe width="370" height="409" src="https://www.youtube.com/embed/VzSbf_ME5vg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
+  <ion-item>
+  <ion-icon color="danger" name="happy-outline" (click)='like()' ></ion-icon>
+  <p >Like</p>
+  <p >{{lke}}</p>
+  {{space}}
+  <ion-icon color="danger" name="heart-dislike-outline" (click)='dislike()'></ion-icon>
+ <p> Dislike</p>
+ <p>{{dlke}}</p>
+</ion-item>
+<ion-item>
+  <p>Comment</p>
+  <ion-icon color="danger" name="copy-outline" slot="end" (click)='como()'></ion-icon>
+</ion-item>
+<ion-list *ngFor="let itt of comoarr">
+<ion-item>
+  <img [src]="'https://icon-library.com/images/person-image-icon/person-image-icon-29.jpg'">
+</ion-item>
+<ion-item>
+  <p>{{itt.email}}</p>
+</ion-item>
+<ion-item>
+  <p>{{itt.data}}</p>
+</ion-item>
+</ion-list>
+  </ion-list>
+
+</ion-content>

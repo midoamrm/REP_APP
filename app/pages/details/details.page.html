@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title><h2 >Ingredients</h2></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/search"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle><p class="p1">{{data.publisher}}</p></ion-card-subtitle>
+      <ion-card-title><p class="p2">{{data.title}}</p></ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+    <ion-img [src]="data.imagerl"></ion-img>
+    <ion-list>
+      <ion-item *ngFor="let item of data.ingredients">
+        <p class="p3">#{{item}}.</p>
+      </ion-item>
+    </ion-list>
+    <a [href]="data.sourceurl">
+      <p class="p4">Source Link</p>
+    </a>
+  </ion-card-content>
+
+  </ion-card>
+
+
+
+</ion-content>
+

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>show files</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-button (click)="createfolder()"> create file</ion-button>
+ <ion-button (click)="addfile()"> add file</ion-button>
+ <input hidden type="file" #filepicker (change)="filesele($event)">
+ <ion-text color="medium"  *ngIf="foldercontent.length===0" >
+   <p>
+     No Doucemnt Found
+   </p>
+ </ion-text>
+  <ion-list>
+   <ion-item-sliding *ngFor="let f of foldercontent">
+     <ion-item   >
+       <ion-icon [name]="f.isfile ? 'document-outline': 'folder-outline' "slot="start"></ion-icon>
+       {{f.name}}
+     </ion-item>
+
+   </ion-item-sliding>
+ </ion-list>
+</ion-content>

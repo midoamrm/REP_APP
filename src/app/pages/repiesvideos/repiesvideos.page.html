@@ -1,0 +1,50 @@
+<ion-header>
+
+
+
+  <ion-toolbar id="tb" >
+
+    <ion-searchbar #search debounce="500"  placeholder="ENTER RECPIES NAME" (ionChange)='onachange($event)'></ion-searchbar>
+    <ion-list *ngIf="validd">
+
+      <ion-item *ngFor="let it of searchitem " (click)='go(it)'>
+        <ion-label><p class="p6">{{it.name}}</p></ion-label>
+        <ion-label><p class="p7"> {{it.pupname}}</p></ion-label>
+
+      </ion-item>
+    </ion-list>
+
+
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+  <ion-list >
+      <div class="container" *ngFor="let it of searchitemim ">
+      <img  [src]="it.im" (click)='go(it)' >
+      <div class="name"><p>{{it.name}}</p></div>
+      <div class="openicon"> <img  class="imgm" [src]="'https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-vector-play-icon-png-image_924817.jpg'" (click)='go(it)' > </div>
+      </div>
+  </ion-list>
+
+</ion-content>
+<ion-footer  >
+  <ion-toolbar color="#00000000">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)='gohome()'>
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+          <ion-icon name="help-circle-outline"></ion-icon>
+          <ion-label> Help</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
+
+

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>General Info</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/search"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img [src]="'https://icon-library.com/images/person-image-icon/person-image-icon-29.jpg'">
+  <p>user name </p>
+  <div class="container">
+    <p class="ptp">Please Entre Old password and old email to change data</p>
+    <p class="pp">Change the data </p>
+    <form  #form="ngForm" (ngSubmit)="sub(form)">
+      <ion-input class="e2" name="email" type="email" placeholder="Old Email" ngModel required></ion-input>
+      <ion-input  class="e3"name="password" type="password" placeholder=" Old Password" ngModel required></ion-input>
+      <ion-button class="bt" size="large" type="submit" [disabled]="form.invalid" expand="block">Change</ion-button>
+      <ion-input class="e4"  name="name" type="text" placeholder="Name" ngModel required></ion-input>
+      <ion-input class="e5" name="newemail" type="text" placeholder="your@email.com" ngModel required></ion-input>
+      <ion-input  class="e6"name="newpassword" type="text" placeholder="Password" ngModel required></ion-input>
+      <ion-input  class="e7"name="confirm" type="text" placeholder="Password again" ngModel required></ion-input>
+  </form>
+ </div>
+</ion-content>
+<ion-footer  >
+  <ion-toolbar color="#00000000">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)='gohome()'>
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)='gopass()'>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-label>Change Passrord</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+          <ion-icon name="help-circle-outline"></ion-icon>
+          <ion-label> Help</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

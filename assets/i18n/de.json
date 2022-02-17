@@ -1,0 +1,11 @@
+{
+  "HOME":{
+    "title":" الصفحة الرئيسية ",
+    "greeting":"Hallo {{Name}}! Willkommen bei der ionischen Akademie"
+
+  },
+  "ALERT":{
+    "header":"Fehler",
+    "msg":"Bei Ihrem Vorgang ist ein Problem aufgetreten"
+  }
+}

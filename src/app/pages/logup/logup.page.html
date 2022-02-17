@@ -1,0 +1,14 @@
+
+<ion-content>
+  <div class="container">
+    <p> RECIPES </p>
+    <form  #form="ngForm" (ngSubmit)="register(form)">
+      <ion-input class="e1"  name="name" type="text" placeholder="Name" ngModel required></ion-input>
+      <ion-input class="e2" name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+      <ion-input  class="e3"name="password" type="password" placeholder="Password" ngModel required></ion-input>
+      <ion-input  class="e4"name="confirm" type="password" placeholder="Password again" ngModel required></ion-input>
+      <a class="link" [href]="'/login'">Already have an account? Sign In</a>
+      <ion-button class="bt" size="large" type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
+  </form>
+ </div>
+</ion-content>

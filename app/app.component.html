@@ -1,0 +1,22 @@
+<ion-app>
+    <ion-menu  menuId="mn" contentId="main-content">
+      <ion-header>
+        <ion-toolbar >
+          <ion-title>Setting And Features</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item><img [src]="'https://icon-library.com/images/person-image-icon/person-image-icon-29.jpg'"></ion-item>
+          <ion-item>User Name</ion-item>
+          <ion-item (click)='lo()'>Log Out<ion-icon slot="start" name="log-out-outline" ></ion-icon></ion-item>
+          <ion-item  (click)='goupload()'>Recpie upload <ion-icon slot="start" name="cloud-upload-outline"></ion-icon></ion-item>
+          <ion-item (click)='add()'>Take Recpie image <ion-icon  slot="start" name="camera-outline"></ion-icon></ion-item>
+          <ion-item (click)=' gotobar()'>scan voucher Code OR Recpie Link <ion-icon slot="start" name="scan-outline"></ion-icon></ion-item>
+          <ion-item (click)='golang()'>Change languages <ion-icon slot="end" name="chevron-forward-outline"></ion-icon></ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content" ></ion-router-outlet>
+
+</ion-app>

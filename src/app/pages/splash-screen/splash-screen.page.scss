@@ -1,0 +1,41 @@
+ion-content{
+  --background: chocolate;
+}
+p{
+  font-weight: 900;
+  font-style: italic;
+  font-size: 250%;
+  color: white;
+  position: absolute;
+  top: 350px;
+  left: 100px;
+  }
+  .container{
+    position: relative;
+    text-align: center;
+
+  }
+  .progress-bar {
+    width: 200px;
+    height: 5px;
+    margin-top: 450px;
+    margin-left: 100px;
+    border: 1px solid #565656;
+    border-radius: 5px;
+    box-shadow: 0 0 10px whitesmoke;
+}
+.percentage {
+  display: block;
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  animation: progress 2000ms ease-in 1;
+}
+@keyframes progress {
+  from {
+      width: 0;
+  }
+  to{
+    width: 200px;
+  }
+}

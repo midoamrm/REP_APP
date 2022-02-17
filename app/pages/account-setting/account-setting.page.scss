@@ -1,0 +1,104 @@
+ion-content{
+  --background: black;
+}
+.pppt{
+  font-weight: 900;
+  font-style: italic;
+  font-size: 80%;
+  color: chocolate;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+}
+.ptp{
+  font-weight: 900;
+  font-style: italic;
+  font-size: 80%;
+  color: chocolate;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  }
+  .container{
+    position: relative;
+    text-align: center;
+
+  }
+
+  .e2{
+    position: absolute;
+    top: 160px;
+    left: 40px;
+    --background: white;
+    border-radius: 50px;
+    width: 320px;
+  }
+  .e3{
+    position: absolute;
+    top: 210px;
+    left: 40px;
+    --background: white;
+    border-radius: 50px;
+    width: 320px;
+  }
+
+  .bt{
+    position: absolute;
+    top: 520px;
+    left: 120px;
+    --background: chocolate;
+  }
+.pp{
+  font-weight: 900;
+  font-style: italic;
+  font-size: 80%;
+  color: chocolate;
+  position: absolute;
+  top: 240px;
+  left: 30px;
+}
+.e4{
+  position: absolute;
+  top: 290px;
+  left: 40px;
+  --background: white;
+  border-radius: 50px;
+  width: 320px;
+}
+.e5{
+  position: absolute;
+  top: 340px;
+  left: 40px;
+  --background: white;
+  border-radius: 50px;
+  width: 320px;
+}
+.e6{
+  position: absolute;
+  top: 390px;
+  left: 40px;
+  --background: white;
+  border-radius: 50px;
+  width: 320px;
+}
+.e7{
+  position: absolute;
+  top: 440px;
+  left: 40px;
+  --background: white;
+  border-radius: 50px;
+  width: 320px;
+}
+img {
+  position: absolute;
+  top:10px;
+  left: 150px;
+  width:  100px;
+  height: 100px;
+  border-radius: 200px;
+}
+ion-toolbar{
+  --background: chocolate;
+  --color: floralwhite;
+
+  }

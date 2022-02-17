@@ -1,0 +1,27 @@
+<ion-header [hidden]="scanactive" >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/search"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Recpies Links OR voucher Code</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [style.--background]="scanactive? '#00000000':'#000'" >
+
+    <p class="ion-text-center" *ngIf=" result && !scanactive "  class="p21"> {{result}}</p>
+    <a [href]="result" class="p21" *ngIf=" result && !scanactive " >Go To the link</a>
+    <p class="ion-text-center" *ngIf=" !result && !scanactive" class="p21" >  NO Link Found</p>
+<ion-row class="scanner-buttons" [hidden]="!scanactive">
+  <ion-col class="ion-no-padding">
+    <ion-button class="btt" expand="full" (click)="stopscannr()"> Stop Scan</ion-button>
+  </ion-col>
+</ion-row>
+<div class="scan-box" [hidden]="!scanactive" ></div>
+</ion-content>
+<ion-footer  [style.--background]="scanactive? '#00000000':'#000'" >
+  <ion-button class="btt" expand="full" (click)="startscanner()" [hidden]="scanactive">
+    Scan other one
+    <ion-icon slot="start" name="scan-outline"></ion-icon>
+  </ion-button>
+</ion-footer>
